@@ -1,0 +1,42 @@
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: 1rem;
+  position: relative;
+  background-size: cover;
+  background-position: top;
+  background-image: linear-gradient( 89.1deg, rgba($color-black, 0.8) 0.7%, rgba($color-primary, 0.8) 88.4%), url("../img/hero1.jpeg");
+  -webkit-clip-path: polygon(0% 82%, 0% 0%, 100% 0%, 100% 100%);
+  clip-path: polygon(0% 82%, 0% 0%, 100% 0%, 100% 100%);
+  z-index: 10;
+
+  &__image {
+    position: absolute;
+    font-size: 10.5rem;
+    cursor: default;
+    padding: 0.5rem;
+    color: $color-white;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 6rem;
+    left: 10rem;
+    font-size: 6rem;
+    color: $color-white;
+  }
+
+  &__menu-box {
+    position: absolute;
+    top: 6rem;
+    right: 10rem;
+    font-size: 6rem;
+    color: $color-white;
+  }
+}
