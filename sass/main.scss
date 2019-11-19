@@ -1,118 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500|Rubik:400,700&display=swap');
-/* color palette https://flatuicolors.com/palette/ca */
-// colors
-$color-primary: rgb(10, 189, 227);
-$color-primary-light: rgb(72, 219, 251);
-$color-primary-dark: rgb(9, 156, 191);
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-$color-white: #FFFFFF;
-$color-grey-dark: #57606f;
-$color-black: rgb(13, 14, 21);
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: inherit;
-}
+@import "components/button";
 
-html {
-  font-size: 62.5%; /* equals 1rem */
-}
+@import "layout/header";
+
+@import "pages/home";
 
 
-body {
-  font-family: 'Rubik', sans-serif;
-  background: $color-grey;
-  box-sizing: border-box;
-  font-weight: 400;
-  line-height: 1.7;
-  color: $color-white;
-}
-/* /BASE */
 
-/* header */
-
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  letter-spacing: 1rem;
-  position: relative;
-  background-size: cover;
-  background-position: top;
-  background-image: linear-gradient( 89.1deg, rgba($color-black, 0.8) 0.7%, rgba($color-primary, 0.8) 88.4%), url("../img/hero1.jpeg");
-  -webkit-clip-path: polygon(0% 82%, 0% 0%, 100% 0%, 100% 100%);
-  clip-path: polygon(0% 82%, 0% 0%, 100% 0%, 100% 100%);
-  z-index: 10;
-}
-
-/* will change to image */
-.header__image {
-  position: absolute;
-  font-size: 10.5rem;
-  cursor: default;
-  padding: 0.5rem;
-  color: $color-white;
-  text-align: center;
-  font-family: 'Permanent Marker', cursive;
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 6rem;
-  left: 10rem;
-  font-size: 6rem;
-  color: $color-white;
-}
-
-.header__menu-box {
-  position: absolute;
-  top: 6rem;
-  right: 10rem;
-  font-size: 6rem;
-  color: $color-white;
-}
-
-/* about section */
-
-.section-about {
-  display: flex;
-  flex-direction: column;
-  margin-top: -15rem;
-  background: $color-black;
-  align-items: stretch;
-  position: relative;
-  padding: 5rem;
-  height: 60rem;
-  width: 100%;
-  z-index: 1;
-}
-
-.section__heading {
-  padding: 3rem;
-  margin-top: 15rem;
-  border-radius: 3px;
-
-}
-
-.heading-primary {
-  display: inline-block;
-  font-size: 5rem;
-  bottom: 20rem;
-  cursor: default;
-  padding: 0.5rem;
-  font-family: 'Roboto', sans-serif;
-  background-image: linear-gradient(to right, rgba($color-primary-dark, 0.8), rgba($color-primary-light, 1.0));
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.paragraph {
-  font-size: 1.8rem;
-
-}
