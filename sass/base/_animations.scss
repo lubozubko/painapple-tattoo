@@ -1,3 +1,20 @@
+@keyframes moveInTop{
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  80% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -5,7 +22,7 @@
   }
 
   80% {
-    transform: translateX(1rem);
+    transform: translateX(3rem);
   }
 
   100% {
@@ -13,3 +30,14 @@
     opacity: 1;
   }
 }
+
+@keyframes zoomIn {
+ 0% {
+   opacity: 0;
+   transform: scale(0.1);
+ }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
