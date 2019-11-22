@@ -1,33 +1,55 @@
-/* about section */
 
-.section__about {
-  margin-top: -15rem;
-  background: $color-black;
-  align-items: flex-start;
-  position: relative;
-  -webkit-clip-path: polygon(0% 82%, 0% 0%, 100% 0%, 100% 100%);
-  clip-path: polygon(0% 82%, 0% 0%, 100% 0%, 100% 100%);
-  padding: 5rem 5rem 15rem 5rem;
-  width: 100%;
-  z-index: 1;
+.header {
+  &__image {
+    animation: moveInLeft 0.6s ease-in;
+  }
+
+  &__logo-box {
+    animation: moveInTop 0.9s ease-in-out;
+  }
+  
+  &__menu-box {
+    animation: moveInTop 0.6s ease-in;
+  }
 }
 
-.section__heading {
-  margin-top: 15rem;
-}
+.section {
+  &__about {
+    margin-top: -15rem;
+    background: $color-black;
+    align-items: flex-start;
+    position: relative;
+    -webkit-clip-path: polygon(0% 82%, 0% 0%, 100% 0%, 100% 100%);
+    clip-path: polygon(0% 82%, 0% 0%, 100% 0%, 100% 100%);
+    padding: 5rem 5rem 15rem 5rem;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  &__heading {
+    margin-top: 15rem;
+  }
+  
+  &__about--text {
+    font-size: $default-font-size;
+  }
 
-.section__about--text {
-  font-size: $default-font-size;
-}
-
-
-.section__about--gallery {
-  background: $color-black-light;
-  padding: 5rem 5rem 25rem 5rem;
-  margin-top: -15rem;
-  -webkit-clip-path: polygon(0% 82%, 0% 0%, 100% 0%, 100% 100%);
-  clip-path: polygon(0% 92%, 0% 0%, 100% 0%, 100% 100%);
-
+  &__about--gallery {
+    background: $color-black-light;
+    padding: 5rem 5rem 25rem 5rem;
+    margin-top: -15rem;
+    -webkit-clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 92%);
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 92%);
+  }
+  
+  &__footer {
+    justify-content: flex-end;
+    height: 50rem;
+    margin-top: -15rem;
+    background-size: cover;
+    background-position: top;
+    background-image: linear-gradient( 89.1deg, rgba($color-black, 0.8) 0.7%, rgba($color-black-light, 0.8) 88.4%), url("../img/hero1.jpeg");
+  }
 }
 
 .gallery-wrap {
@@ -40,14 +62,10 @@
   margin: 1rem;
   height: 40rem;
   width: 57rem;
-}
+  transition: all 1s;
 
-.section__footer {
-  justify-content: space-around;
-  align-items: center;
-  height: 40rem;
-  margin-top: -15rem;
-  background-size: cover;
-  background-position: top;
-  background-image: linear-gradient( 89.1deg, rgba($color-black, 0.8) 0.7%, rgba($color-black-light, 0.8) 88.4%), url("../img/hero1.jpeg");
+  &:hover {
+    background: rgba($color-black, 0.9);
+    z-index: 2;
+  }
 }
